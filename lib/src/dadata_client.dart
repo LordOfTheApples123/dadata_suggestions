@@ -27,6 +27,15 @@ class DadataClient {
     }
   }
 
+  Future<AddressResponse> suggestByIp(String ip) async {
+    try {
+      final q = {'ip': ip};
+      return _performRequest(q, Constants.addressEndpoint);
+    } catch (e) {
+      throw e;
+    }
+  }
+
   /// Calls reverse geocoding API with [RevgeocodeSuggestionRequest] provided.
   Future<AddressResponse> revGeocode(RevgeocodeSuggestionRequest query) async {
     try {
