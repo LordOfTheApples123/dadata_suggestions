@@ -4,6 +4,7 @@ import 'address_suggestion_constraint.dart';
 import 'address_suggestion_priority.dart';
 import 'address_suggestion_radius_constraint.dart';
 import 'level_boundry.dart';
+
 part 'address_suggestion_request.g.dart';
 
 ///Used to call address sugestions API.
@@ -31,38 +32,23 @@ class AddressSuggestionRequest {
   LevelBoundry _lowerBoundary;
 
   @JsonKey(name: 'from_bound')
-  String get upperBoundary {
-    return _upperBoundary.value;
+  LevelBoundry get upperBoundary {
+    return _upperBoundary;
   }
 
   @JsonKey(name: 'from_bound')
-  set upperBoundary(dynamic value) {
-    if (value is String) {
-      _upperBoundary = LevelBoundryValue.forValue(value);
-      return;
-    }
-    if (value is LevelBoundry) {
-      _upperBoundary = value;
-      return;
-    }
-    _upperBoundary = null;
+  set upperBoundary(LevelBoundry value) {
+    _upperBoundary = value;
   }
 
   @JsonKey(name: 'to_bound')
-  String get lowerBoundary {
-    return _lowerBoundary.value;
+  LevelBoundry get lowerBoundary {
+    return _lowerBoundary;
   }
 
   @JsonKey(name: 'to_bound')
-  set lowerBoundary(dynamic value) {
-    if (value is String) {
-      _lowerBoundary = LevelBoundryValue.forValue(value);
-      return;
-    }
-    if (value is LevelBoundry) {
-      _lowerBoundary = value;
-    }
-    _lowerBoundary = null;
+  set lowerBoundary(LevelBoundry value) {
+    _lowerBoundary = value;
   }
 
   ///AddressSuggestionRequest represents an serializable object
