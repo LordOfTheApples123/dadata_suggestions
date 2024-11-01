@@ -8,64 +8,46 @@ import 'level_boundry.dart';
 part 'address_suggestion_request.g.dart';
 
 ///Used to call address sugestions API.
-@JsonSerializable(explicitToJson: true, nullable: true)
+@JsonSerializable(explicitToJson: true)
 class AddressSuggestionRequest {
   @JsonKey(name: 'query', required: true)
-  String query;
+  final String? query;
 
   @JsonKey(name: 'count')
-  int count = 10;
+  final int count;
 
   @JsonKey(name: 'language')
-  String language = 'ru';
+  final String language;
 
   @JsonKey(name: 'locations')
-  List<AddressSuggestionConstraint> constraints;
+  final List<AddressSuggestionConstraint>? constraints;
 
   @JsonKey(name: 'locations_geo')
-  List<AddressSuggestionRadiusConstraint> radiusConstraints;
+  final List<AddressSuggestionRadiusConstraint>? radiusConstraints;
 
   @JsonKey(name: 'locations_boost')
-  List<AddressSuggestionPriority> locationsPriority;
-
-  LevelBoundry _upperBoundary;
-  LevelBoundry _lowerBoundary;
+  final List<AddressSuggestionPriority>? locationsPriority;
 
   @JsonKey(name: 'from_bound')
-  LevelBoundry get upperBoundary {
-    return _upperBoundary;
-  }
-
-  @JsonKey(name: 'from_bound')
-  set upperBoundary(LevelBoundry value) {
-    _upperBoundary = value;
-  }
-
+  final LevelBoundry? upperBoundary;
   @JsonKey(name: 'to_bound')
-  LevelBoundry get lowerBoundary {
-    return _lowerBoundary;
-  }
-
-  @JsonKey(name: 'to_bound')
-  set lowerBoundary(LevelBoundry value) {
-    _lowerBoundary = value;
-  }
+  final LevelBoundry? lowerBoundary;
 
   ///AddressSuggestionRequest represents an serializable object
   ///used to perform suggestion queries.
   ///[query] is required field.
   ///[count] defaults to `10` and [language] defaults to `ru`.
-  AddressSuggestionRequest(
-    this.query, {
-    this.count,
-    this.language,
+  const AddressSuggestionRequest(
+     {
+       this.query,
+    this.count = 10,
+    this.language = 'ru',
     this.constraints,
     this.radiusConstraints,
     this.locationsPriority,
-    LevelBoundry upperBoundary,
-    LevelBoundry lowerBoundary,
-  })  : this._upperBoundary = upperBoundary,
-        this._lowerBoundary = lowerBoundary;
+    this.upperBoundary,
+    this.lowerBoundary,
+  });
 
   factory AddressSuggestionRequest.fromJson(Map<String, dynamic> json) =>
       _$AddressSuggestionRequestFromJson(json);

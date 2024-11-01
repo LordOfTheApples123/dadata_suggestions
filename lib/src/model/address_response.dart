@@ -3,12 +3,14 @@ import 'address_suggestion.dart';
 part 'address_response.g.dart';
 
 /// Represents an object used to hold API response.
-@JsonSerializable(explicitToJson: true, nullable: true)
+@JsonSerializable(explicitToJson: true)
 class AddressResponse {
   @JsonKey(name: 'suggestions')
-  List<AddressSuggestion> suggestions;
+   final List<AddressSuggestion>? suggestions;
 
-  AddressResponse();
+  const AddressResponse({
+    this.suggestions,
+  });
 
   factory AddressResponse.fromJson(Map<String, dynamic> json) =>
       _$AddressResponseFromJson(json);

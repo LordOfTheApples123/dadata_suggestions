@@ -3,7 +3,7 @@ import 'package:dadata_suggestions/dadata_suggestions.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 
 class SuggestionsScreen extends StatefulWidget {
-  final String token;
+  final String? token;
 
   SuggestionsScreen({Key key, this.token}) : super(key: key);
 
@@ -44,7 +44,7 @@ class _SuggestionsScreenState extends State<SuggestionsScreen> {
     );
   }
 
-  Future<List<AddressSuggestion>> _startSuggesting(String text) async {
+  Future<List<AddressSuggestion>> _startSuggesting(String? text) async {
     final tpts = text.split(',');
     if (tpts.length == 2) {
       final lat = double.tryParse(tpts[0]);

@@ -3,63 +3,63 @@ part 'address_suggestion_constraint.g.dart';
 
 ///AddressSuggestionConstraint used to limit search results according to
 ///Dadata online API documentation https://confluence.hflabs.ru/pages/viewpage.action?pageId=204669108.
-@JsonSerializable(explicitToJson: true, nullable: true)
+@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class AddressSuggestionConstraint {
   @JsonKey(name: "region")
-  String region;
+  final String? region;
 
   @JsonKey(name: "city")
-  String city;
+  final String? city;
 
   @JsonKey(name: "street_type_full")
-  String streetTypeFull;
+  final String? streetTypeFull;
 
   @JsonKey(name: "settlement_type_full")
-  String settlementTypeFull;
+  final String? settlementTypeFull;
 
   @JsonKey(name: "city_district_type_full")
-  String cityDistrictTypeFull;
+  final String? cityDistrictTypeFull;
 
   @JsonKey(name: "city_type_full")
-  String cityTypeFull;
+  final String? cityTypeFull;
 
   @JsonKey(name: "area_type_full")
-  String areaTypeFull;
+  final String? areaTypeFull;
 
   @JsonKey(name: "region_type_full")
-  String regionTypeFull;
+  final String? regionTypeFull;
 
   @JsonKey(name: "country")
-  String country;
+  final String? country;
 
   @JsonKey(name: "country_iso_code")
-  String countryISOCode;
+  final String? countryISOCode;
 
   @JsonKey(name: "region_iso_code")
-  String regionISOCode;
+  final String? regionISOCode;
 
   @JsonKey(name: "kladr_id")
-  String kladrId;
+  final String? kladrId;
 
   @JsonKey(name: "region_fias_id")
-  String regionFIASId;
+  final String? regionFIASId;
 
   @JsonKey(name: "area_fias_id")
-  String areaFIASId;
+  final String? areaFIASId;
 
   @JsonKey(name: "city_fias_id")
-  String cityFIASId;
+  final String? cityFIASId;
 
   @JsonKey(name: "settlement_fias_id")
-  String settlementFIASId;
+  final String? settlementFIASId;
 
   @JsonKey(name: "street_fias_id")
-  String streetFIASId;
+  final String? streetFIASId;
 
   ///AddressSuggestionConstraint used to limit search results according to
   ///Dadata online API documentation https://confluence.hflabs.ru/pages/viewpage.action?pageId=204669108.
   ///All the fields are optional.
-  AddressSuggestionConstraint({
+  const AddressSuggestionConstraint({
     this.region,
     this.city,
     this.streetTypeFull,

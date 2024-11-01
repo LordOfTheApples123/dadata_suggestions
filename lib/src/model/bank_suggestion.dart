@@ -1,13 +1,14 @@
+import 'package:dadata_suggestions/src/model/bank_suggestion_data.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'suggestion_data.dart';
 
-part 'address_suggestion.g.dart';
+part 'bank_suggestion.g.dart';
 
 /// Every single suggestion is represented as AddressSuggestion.
 @JsonSerializable(
   explicitToJson: true,
 )
-class AddressSuggestion {
+class BankSuggestion {
   ///Address in short format.
   @JsonKey(name: 'value')
   final String? value;
@@ -18,16 +19,16 @@ class AddressSuggestion {
 
   ///All the data returned in response to suggestion query.
   @JsonKey(name: 'data')
-  final SuggestionData? data;
+  final BankSuggestionData? data;
 
-  AddressSuggestion({
+  const BankSuggestion({
     this.value,
     this.unrestrictedValue,
     this.data,
   });
 
-  factory AddressSuggestion.fromJson(Map<String, dynamic> json) =>
-      _$AddressSuggestionFromJson(json);
+  factory BankSuggestion.fromJson(Map<String, dynamic> json) =>
+      _$BankSuggestionFromJson(json);
 
-  Map<String, dynamic> toJson() => _$AddressSuggestionToJson(this);
+  Map<String, dynamic> toJson() => _$BankSuggestionToJson(this);
 }

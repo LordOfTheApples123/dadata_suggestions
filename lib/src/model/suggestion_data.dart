@@ -2,256 +2,356 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'suggestion_data.g.dart';
 
-@JsonSerializable(explicitToJson: true, nullable: true)
+@JsonSerializable(explicitToJson: true)
 class SuggestionData {
   @JsonKey(name: 'postal_code')
-  String postalCode;
+  final String? postalCode;
 
   @JsonKey(name: 'country')
-  String country;
+  final String? country;
 
   @JsonKey(name: 'country_iso_code')
-  String countryIsoCode;
+  final String? countryIsoCode;
 
   @JsonKey(name: 'federal_district')
-  String federalDistrict;
+  final String? federalDistrict;
 
   @JsonKey(name: 'region_fias_id')
-  String regionFiasId;
+  final String? regionFiasId;
 
   @JsonKey(name: 'region_kladr_id')
-  String regionKladrId;
+  final String? regionKladrId;
 
   @JsonKey(name: 'region_iso_code')
-  String regionIsoCode;
+  final String? regionIsoCode;
 
   @JsonKey(name: 'region_with_type')
-  String regionWithType;
+  final String? regionWithType;
 
   @JsonKey(name: 'region_type')
-  String regionType;
+  final String? regionType;
 
   @JsonKey(name: 'region_type_full')
-  String regionTypeFull;
+  final String? regionTypeFull;
 
   @JsonKey(name: 'region')
-  String region;
+  final String? region;
 
   @JsonKey(name: 'area_fias_id')
-  String areaFiasId;
+  final String? areaFiasId;
 
   @JsonKey(name: 'area_kladr_id')
-  String areaKladrId;
+  final String? areaKladrId;
 
   @JsonKey(name: 'area_with_type')
-  String areaWithType;
+  final String? areaWithType;
 
   @JsonKey(name: 'area_type')
-  String areaType;
+  final String? areaType;
 
   @JsonKey(name: 'area_type_full')
-  String areaTypeFull;
+  final String? areaTypeFull;
 
   @JsonKey(name: 'area')
-  String area;
+  final String? area;
 
   @JsonKey(name: 'city_fias_id')
-  String cityFiasId;
+  final String? cityFiasId;
 
   @JsonKey(name: 'city_kladr_id')
-  String cityKladrId;
+  final String? cityKladrId;
 
   @JsonKey(name: 'city_with_type')
-  String cityWithType;
+  final String? cityWithType;
 
   @JsonKey(name: 'city_type')
-  String cityType;
+  final String? cityType;
 
   @JsonKey(name: 'city_type_full')
-  String cityTypeFull;
+  final String? cityTypeFull;
 
   @JsonKey(name: 'city')
-  String city;
+  final String? city;
 
   @JsonKey(name: 'city_area')
-  String cityArea;
+  final String? cityArea;
 
   @JsonKey(name: 'city_district_fias_id')
-  String cityDistrictFiasId;
+  final String? cityDistrictFiasId;
 
   @JsonKey(name: 'city_district_kladr_id')
-  String cityDistrictKladrId;
+  final String? cityDistrictKladrId;
 
   @JsonKey(name: 'city_district_with_type')
-  String cityDistrictWithType;
+  final String? cityDistrictWithType;
 
   @JsonKey(name: 'city_district_type')
-  String cityDistrictType;
+  final String? cityDistrictType;
 
   @JsonKey(name: 'city_district_type_full')
-  String cityDistrictTypeFull;
+  final String? cityDistrictTypeFull;
 
   @JsonKey(name: 'city_district')
-  String cityDistrict;
+  final String? cityDistrict;
 
   @JsonKey(name: 'settlement_fias_id')
-  String settlementFiasId;
+  final String? settlementFiasId;
 
   @JsonKey(name: 'settlement_kladr_id')
-  String settlementKladrId;
+  final String? settlementKladrId;
 
   @JsonKey(name: 'settlement_with_type')
-  String settlementWithType;
+  final String? settlementWithType;
 
   @JsonKey(name: 'settlement_type')
-  String settlementType;
+  final String? settlementType;
 
   @JsonKey(name: 'settlement_type_full')
-  String settlementTypeFull;
+  final String? settlementTypeFull;
 
   @JsonKey(name: 'settlement')
-  String settlement;
+  final String? settlement;
 
   @JsonKey(name: 'street_fias_id')
-  String streetFiasId;
+  final String? streetFiasId;
 
   @JsonKey(name: 'street_kladr_id')
-  String streetKladrId;
+  final String? streetKladrId;
 
   @JsonKey(name: 'street_with_type')
-  String streetWithType;
+  final String? streetWithType;
 
   @JsonKey(name: 'street_type')
-  String streetType;
+  final String? streetType;
 
   @JsonKey(name: 'street_type_full')
-  String streetTypeFull;
+  final String? streetTypeFull;
 
   @JsonKey(name: 'street')
-  String street;
+  final String? street;
 
   @JsonKey(name: 'house_fias_id')
-  String houseFiasId;
+  final String? houseFiasId;
 
   @JsonKey(name: 'house_kladr_id')
-  String houseKladrId;
+  final String? houseKladrId;
 
   @JsonKey(name: 'house_type')
-  String houseType;
+  final String? houseType;
 
   @JsonKey(name: 'house_type_full')
-  String houseTypeFull;
+  final String? houseTypeFull;
 
   @JsonKey(name: 'house')
-  String house;
+  final String? house;
 
   @JsonKey(name: 'block_type')
-  String blockType;
+  final String? blockType;
 
   @JsonKey(name: 'block_type_full')
-  String blockTypeFull;
+  final String? blockTypeFull;
 
   @JsonKey(name: 'block')
-  String block;
+  final String? block;
 
   @JsonKey(name: 'flat_fias_id')
-  String flatFiasId;
+  final String? flatFiasId;
 
   @JsonKey(name: 'flat_type')
-  String flatType;
+  final String? flatType;
 
   @JsonKey(name: 'flat_type_full')
-  String flatTypeFull;
+  final String? flatTypeFull;
 
   @JsonKey(name: 'flat')
-  String flat;
+  final String? flat;
 
   @JsonKey(name: 'flat_area')
-  String flatArea;
+  final String? flatArea;
 
   @JsonKey(name: 'square_meter_price')
-  String squareMeterPrice;
+  final String? squareMeterPrice;
 
   @JsonKey(name: 'flat_price')
-  String flatPrice;
+  final String? flatPrice;
 
   @JsonKey(name: 'postal_box')
-  String postalBox;
+  final String? postalBox;
 
   @JsonKey(name: 'fias_id')
-  String fiasId;
+  final String? fiasId;
 
   @JsonKey(name: 'fias_code')
-  String fiasCode;
+  final String? fiasCode;
 
   @JsonKey(name: 'fias_level')
-  String fiasLevel;
+  final String? fiasLevel;
 
   @JsonKey(name: 'fias_actuality_state')
-  String fiasActualityState;
+  final String? fiasActualityState;
 
   @JsonKey(name: 'kladr_id')
-  String kladrId;
+  final String? kladrId;
 
   @JsonKey(name: 'geoname_id')
-  String geonameId;
+  final String? geonameId;
 
   @JsonKey(name: 'capital_marker')
-  String capitalMarker;
+  final String? capitalMarker;
 
   @JsonKey(name: 'okato')
-  String okato;
+  final String? okato;
 
   @JsonKey(name: 'oktmo')
-  String oktmo;
+  final String? oktmo;
 
   @JsonKey(name: 'tax_office')
-  String taxOffice;
+  final String? taxOffice;
 
   @JsonKey(name: 'tax_office_legal')
-  String taxOfficeLegal;
+  final String? taxOfficeLegal;
 
   @JsonKey(name: 'timezone')
-  String timezone;
+  final String? timezone;
 
+  /// 🚬🗿
   @JsonKey(name: 'geo_lat')
-  dynamic geoLat;
+  final dynamic geoLat;
 
+  ///
+  ///          __
+  ///         (::\
+  ///   _____ _\::\__
+  ///   /|    _(::(  \::\__
+  ///   / |  _(::\::\  \::\:\
+  ///   \ |_(::Y\""`.\__\_|""\   cjr
+  ///   \___\/__\ ___________\
+  ///   ( ( \ x \  __ _  _  _\                  (
+  ///   |_:__\~  \ \_ |\| `(__\                ) )
+  ///   |z:   \   \ \ |"\\_7 _)\              ( )
+  ///   |i:    \   \            \              (,,_________________
+  ///   |p:     \ # \____________\       _____  ;;_____________):::)
+  ///   |p:      \  /  cancers   /      /XxXxX`-'xXxXxXxX`-\
+  ///   (o:______ \/____________/      /____________________\
   @JsonKey(name: 'geo_lon')
-  dynamic geoLon;
+  final dynamic geoLon;
 
   @JsonKey(name: 'beltway_hit')
-  String beltwayHit;
+  final String? beltwayHit;
 
   @JsonKey(name: 'beltway_distance')
-  String beltwayDistance;
+  final String? beltwayDistance;
 
+  /// 2020 json_annotation is scary
   // Actual Metro to be implemented.
   @JsonKey(name: 'metro')
-  List<dynamic> metro;
+  final List<dynamic>? metro;
 
   @JsonKey(name: 'qc')
-  dynamic qc;
+  final dynamic qc;
 
   @JsonKey(name: 'qc_geo')
-  dynamic qcGeo;
+  final dynamic qcGeo;
 
   @JsonKey(name: 'qc_complete')
-  dynamic qcComplete;
+  final dynamic qcComplete;
 
   @JsonKey(name: 'qc_house')
-  dynamic qcHouse;
+  final dynamic qcHouse;
 
   @JsonKey(name: 'history_values')
-  List<String> historyValues;
+  final List<String>? historyValues;
 
   @JsonKey(name: 'unparsed_parts')
-  String unparsedParts;
+  final String? unparsedParts;
 
   @JsonKey(name: 'source')
-  String source;
+  final String? source;
 
-  SuggestionData();
+  const SuggestionData(
+    this.postalCode,
+    this.country,
+    this.countryIsoCode,
+    this.federalDistrict,
+    this.regionFiasId,
+    this.regionKladrId,
+    this.regionIsoCode,
+    this.regionWithType,
+    this.regionType,
+    this.regionTypeFull,
+    this.region,
+    this.areaFiasId,
+    this.areaKladrId,
+    this.areaWithType,
+    this.areaType,
+    this.areaTypeFull,
+    this.area,
+    this.cityFiasId,
+    this.cityKladrId,
+    this.cityWithType,
+    this.cityType,
+    this.cityTypeFull,
+    this.city,
+    this.cityArea,
+    this.cityDistrictFiasId,
+    this.cityDistrictKladrId,
+    this.cityDistrictWithType,
+    this.cityDistrictType,
+    this.cityDistrictTypeFull,
+    this.cityDistrict,
+    this.settlementFiasId,
+    this.settlementKladrId,
+    this.settlementWithType,
+    this.settlementType,
+    this.settlementTypeFull,
+    this.settlement,
+    this.streetFiasId,
+    this.streetKladrId,
+    this.streetWithType,
+    this.streetType,
+    this.streetTypeFull,
+    this.street,
+    this.houseFiasId,
+    this.houseKladrId,
+    this.houseType,
+    this.houseTypeFull,
+    this.house,
+    this.blockType,
+    this.blockTypeFull,
+    this.block,
+    this.flatFiasId,
+    this.flatType,
+    this.flatTypeFull,
+    this.flat,
+    this.flatArea,
+    this.squareMeterPrice,
+    this.flatPrice,
+    this.postalBox,
+    this.fiasId,
+    this.fiasCode,
+    this.fiasLevel,
+    this.fiasActualityState,
+    this.kladrId,
+    this.geonameId,
+    this.capitalMarker,
+    this.okato,
+    this.oktmo,
+    this.taxOffice,
+    this.taxOfficeLegal,
+    this.timezone,
+    this.geoLat,
+    this.geoLon,
+    this.beltwayHit,
+    this.beltwayDistance,
+    this.metro,
+    this.qc,
+    this.qcGeo,
+    this.qcComplete,
+    this.qcHouse,
+    this.historyValues,
+    this.unparsedParts,
+    this.source,
+  );
 
   factory SuggestionData.fromJson(Map<String, dynamic> json) =>
       _$SuggestionDataFromJson(json);

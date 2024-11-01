@@ -1,21 +1,21 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'address_suggestion.dart';
+part of 'bank_suggestion.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-AddressSuggestion _$AddressSuggestionFromJson(Map<String, dynamic> json) =>
-    AddressSuggestion(
+BankSuggestion _$BankSuggestionFromJson(Map<String, dynamic> json) =>
+    BankSuggestion(
       value: json['value'] as String?,
       unrestrictedValue: json['unrestricted_value'] as String?,
       data: json['data'] == null
           ? null
-          : SuggestionData.fromJson(json['data'] as Map<String, dynamic>),
+          : BankSuggestionData.fromJson(json['data'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$AddressSuggestionToJson(AddressSuggestion instance) =>
+Map<String, dynamic> _$BankSuggestionToJson(BankSuggestion instance) =>
     <String, dynamic>{
       'value': instance.value,
       'unrestricted_value': instance.unrestrictedValue,
